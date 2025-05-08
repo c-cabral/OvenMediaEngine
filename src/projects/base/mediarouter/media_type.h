@@ -12,6 +12,13 @@
 
 namespace cmn
 {
+	enum class MediaRouterStreamType : int8_t
+	{
+		UNKNOWN = -1,
+		INBOUND,
+		OUTBOUND
+	};
+
 	enum class MediaType : int8_t
 	{
 		Unknown = -1,
@@ -178,6 +185,8 @@ namespace cmn
 				return "VIDEO_EVENT";
 			case cmn::PacketType::AUDIO_EVENT:
 				return "AUDIO_EVENT";
+			case cmn::PacketType::EVENT:
+				return "EVENT";							
 			default:
 				return "Unknown";
 		}
